@@ -32,6 +32,6 @@ export function actionCreator<P> (type: string) {
     return Object.assign(ac, { type })
 }
 
-function isType<P> (action: Action<any>, actionCreator: ActionCreator<P>) : action is Action<P> {
+export function isType<P> (action: Action<any>, actionCreator: ActionCreator<P>) : action is Action<P> {
     return action.type === actionCreator.type
 }
