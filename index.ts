@@ -5,6 +5,12 @@ export function isPresent<P> (item?: P | null) : item is P {
     return item !== undefined && item !== null
 }
 
+export interface Keyable<T> {
+    [key: string]: T
+}
+
+export type ValueOf<T> = T[keyof T];
+
 /**
  * Typed Action and Action Creator for React's useReducer
  */
